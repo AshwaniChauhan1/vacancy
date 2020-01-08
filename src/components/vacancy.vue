@@ -32,7 +32,7 @@
       <div class="backgroundImage"></div>
       <b-container>
         <b-row align-h="center" class="py-5">
-          <b-col class="d-flex justify-content-end">
+          <b-col lg="5" md="6" class="d-flex justify-content-end">
             <div class="shadow-sm mb-2 headerCard bg-white">
               <h2 class="px-5 py-4">Bent u onze nieuwe partner?</h2>
               <p class="px-5">
@@ -49,9 +49,9 @@
               </div>
             </div>
           </b-col>
-          <b-col>
+          <b-col lg="5" md="6">
             <div class="p-3">
-              <img src="./../img/timo_partner.svg" fluid alt="timo_partner" height="300" />
+              <img src="./../img/timo_partner.svg" class="img-fuild imgPartner" alt="timo_partner" />
             </div>
           </b-col>
         </b-row>
@@ -59,133 +59,33 @@
     </div>
 
     <div class="bg-light">
-      <b-container style="width:62%;" class="py-5">
-        <b-row class="py-3">
-          <b-col>
-            <div align="center" class="shadow-sm-sm p-2 bg-white serviceCard">
-              <div class="py-3">
-                <img src="./../img/range.png" height="50" />
-              </div>
-              <h5 class="px-3">Groot bereik</h5>
-              <p class="py-3 px-3 text-left">
-                Lorem ipsum dolor sit amet,
-                consectetur adipiscing elit. Nam
-                consequat arcu sed nulla lacinia,
-                quis blandit eros facil.
-              </p>
-            </div>
-          </b-col>
-          <b-col>
-            <div align="center" class="shadow-sm p-2 bg-white serviceCard">
-              <div class="py-3">
-                <img src="./../img/freeSignup.png" height="50" />
-              </div>
-              <h5 class="px-3">Gratis aanmelden</h5>
-              <p class="py-3 px-3 text-left">
-                Lorem ipsum dolor sit amet,
-                consectetur adipiscing elit. Nam
-                consequat arcu sed nulla lacinia,
-                quis blandit eros facil.
-              </p>
-            </div>
-          </b-col>
-          <b-col>
-            <div align="center" class="shadow-sm p-2 bg-white serviceCard">
-              <div class="py-3">
-                <img src="./../img/service.png" height="50" />
-              </div>
-              <h5 class="px-3">Klantenservice</h5>
-              <p class="py-3 px-3 text-left">
-                Lorem ipsum dolor sit amet,
-                consectetur adipiscing elit. Nam
-                consequat arcu sed nulla lacinia,
-                quis blandit eros facil.
-              </p>
-            </div>
-          </b-col>
-        </b-row>
-        <b-row class="py-3">
-          <b-col>
-            <div align="center" class="shadow-sm p-2 bg-white serviceCard">
-              <div class="py-3">
-                <img src="./../img/support.png" height="50" />
-              </div>
-              <h5 class="px-3">Support en inzage</h5>
-              <p class="py-3 px-3 text-left">
-                Lorem ipsum dolor sit amet,
-                consectetur adipiscing elit. Nam
-                consequat arcu sed nulla lacinia,
-                quis blandit eros facil.
-              </p>
-            </div>
-          </b-col>
-          <b-col>
-            <div align="center" class="shadow-sm p-2 bg-white serviceCard">
-              <div class="py-3">
-                <img src="./../img/money.png" height="50" />
-              </div>
-              <h5 class="px-3">Verdien geld</h5>
-              <p class="py-3 px-3 text-left">
-                Lorem ipsum dolor sit amet,
-                consectetur adipiscing elit. Nam
-                consequat arcu sed nulla lacinia,
-                quis blandit eros facil.
-              </p>
-            </div>
-          </b-col>
-          <b-col>
-            <div align="center" class="shadow-sm p-2 bg-white serviceCard">
-              <div class="py-3">
-                <img src="./../img/quality.png" height="50" />
-              </div>
-              <h5 class="px-3">Kwalitatief aanbod</h5>
-              <p class="py-3 px-3 text-left">
-                Lorem ipsum dolor sit amet,
-                consectetur adipiscing elit. Nam
-                consequat arcu sed nulla lacinia,
-                quis blandit eros facil.
-              </p>
-            </div>
-          </b-col>
-        </b-row>
-        <b-row class="py-3">
-          <b-col class="d-flex justify-content-end">
-            <div align="center" class="shadow-sm p-2 bg-white serviceCard">
-              <div class="py-3">
-                <img src="./../img/wrench.png" height="50" />
-              </div>
-              <h5 class="px-3">Maatwerk oplossingen</h5>
-              <p class="py-3 px-3 text-left">
-                Lorem ipsum dolor sit amet,
-                consectetur adipiscing elit. Nam
-                consequat arcu sed nulla lacinia,
-                quis blandit eros facil.
-              </p>
-            </div>
-          </b-col>
-          <b-col>
-            <div align="center" class="shadow-sm p-2 bg-white serviceCard">
-              <div class="py-3">
-                <img src="./../img/thumbs.png" height="50" />
-              </div>
-              <h5 class="mb-4 pb-2">Gemak</h5>
-              <p class="py-3 px-3 text-left">
-                Lorem ipsum dolor sit amet,
-                consectetur adipiscing elit. Nam
-                consequat arcu sed nulla lacinia,
-                quis blandit eros facil.
-              </p>
-            </div>
+      <b-container class="pt-5">
+        <b-row class="justify-content-center">
+          <b-col lg="8" sm="12">
+            <b-row class="pt-3 justify-content-center">
+              <b-col lg="4" sm="12" class="mb-5" v-for="(row,index) in rows" :key="index">
+                <div class="d-flex justify-content-center">
+                  <div align="center" class="shadow-sm p-2 bg-white serviceCard">
+                    <div class="py-3">
+                      <img :src="getImgUrl(row)" height="50" />
+                    </div>
+                    <div class="title">
+                      <h5 class="px-3">{{row.title}}</h5>
+                    </div>
+                  </div>
+                </div>
+              </b-col>
+            </b-row>
           </b-col>
         </b-row>
       </b-container>
     </div>
     <footer class="d-flex justify-content-center">
       <div class="d-flex justify-content-between footer">
-        <div class="pt-3">
+        <div class="pt-3 pr-3">
           <p>&copy;2013 - 2019 Vliegenenparkeren.nl - Alle rechten voorbehouden</p>
         </div>
-        <div class="pt-3">
+        <div class="pt-3 pl-3">
           <p>Bedrijfsgegevens / Privacy policy / Algemene voorwaarden / Sitemap</p>
         </div>
       </div>
@@ -194,7 +94,67 @@
 </template>
 <script>
 export default {
-  name: "vacancy"
+  name: "vacancy",
+  data() {
+    return {
+      rows: [
+        {
+          image: "range",
+          title: "Groot bereik",
+          text:
+            "Lorem ipsum dolor sit amet,consectetur adipiscing elit. Nam consequat arcu sed nulla lacinia,quis blandit eros facil."
+        },
+        {
+          image: "freeSignup",
+          title: "Gratis aanmelden",
+          text:
+            "Lorem ipsum dolor sit amet,consectetur adipiscing elit. Nam consequat arcu sed nulla lacinia,quis blandit eros facil."
+        },
+        {
+          image: "service",
+          title: "Klantenservice",
+          text:
+            "Lorem ipsum dolor sit amet,consectetur adipiscing elit. Nam consequat arcu sed nulla lacinia,quis blandit eros facil."
+        },
+        {
+          image: "support",
+          title: "Support en inzage",
+          text:
+            "Lorem ipsum dolor sit amet,consectetur adipiscing elit. Nam consequat arcu sed nulla lacinia,quis blandit eros facil."
+        },
+        {
+          image: "money",
+          title: "Verdien geld",
+          text:
+            "Lorem ipsum dolor sit amet,consectetur adipiscing elit. Nam consequat arcu sed nulla lacinia,quis blandit eros facil."
+        },
+        {
+          image: "quality",
+          title: "Kwalitatief aanbod",
+          text:
+            "Lorem ipsum dolor sit amet,consectetur adipiscing elit. Nam consequat arcu sed nulla lacinia,quis blandit eros facil."
+        },
+        {
+          image: "wrench",
+          title: "Maatwerk oplossingen",
+          text:
+            "Lorem ipsum dolor sit amet,consectetur adipiscing elit. Nam consequat arcu sed nulla lacinia,quis blandit eros facil."
+        },
+        {
+          image: "thumbs",
+          title: "Gemak",
+          text:
+            "Lorem ipsum dolor sit amet,consectetur adipiscing elit. Nam consequat arcu sed nulla lacinia,quis blandit eros facil."
+        }
+      ]
+    };
+  },
+  methods: {
+    getImgUrl(row) {
+      var images = require.context("./../img/", true, /\.png$/);
+      return images("./" + row.image + ".png");
+    }
+  }
 };
 </script>
 
@@ -209,13 +169,20 @@ export default {
   font-weight: bolder;
 }
 
+.imgPartner {
+  max-height: 300px;
+}
+
 .serviceCard {
-  width: 14rem;
+  max-width: 14rem;
   border-bottom: 10px solid #00bfff;
 }
 .serviceCard p {
   font-size: 13px;
   color: black;
+}
+.title {
+  height: 50px;
 }
 footer {
   background-color: #005070;
@@ -226,7 +193,6 @@ footer {
 .footer p {
   color: #6192a7;
   font-size: 12px;
-  line-height: 0.8;
 }
 .points {
   font-weight: bold;
@@ -252,8 +218,8 @@ sup {
   width: 100%;
   height: 500px;
 }
-.button{
+.button {
   background-color: #00bfff;
-  color:white;
+  color: white;
 }
 </style>
