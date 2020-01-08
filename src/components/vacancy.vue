@@ -9,10 +9,7 @@
           </b-col>
           <b-col lg="5" md="6" class="d-flex justify-content-center pt-4 mt-3 ">
             <div class="d-flex pt-2">
-              <img src="./../img/star.svg" height="15" />
-              <img src="./../img/star.svg" height="15" />
-              <img src="./../img/star.svg" height="15" />
-              <img src="./../img/star.svg" height="15" />
+              <img v-for="index in 4" :key="index" src="./../img/star.svg" height="15" />
               <img src="./../img/star_half.svg" height="15" />
             </div>
             <div class="px-2">
@@ -160,6 +157,11 @@ export default {
 </script>
 
 <style scoped>
+header{
+  background-image: url("./../img/clouds.png");
+   background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
 .headerCard {
   max-width: 23rem;
 }
@@ -206,11 +208,10 @@ sup {
 }
 .headline {
   position: absolute;
-  top: 100px;
+  top: 98px;
   height: 25px;
   width: 100%;
   background-color: #00bfff;
-  z-index: -1;
 }
 .backgroundImage {
   clip-path: polygon(0 0, 100% 0, 100% 40%, 0 70%);
