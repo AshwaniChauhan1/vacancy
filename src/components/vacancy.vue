@@ -3,11 +3,11 @@
     <header>
       <div class="headline"></div>
       <b-container>
-        <b-row class="pt-3 pb-2">
-          <b-col class="d-flex justify-content-center">
+        <b-row class="pt-3 pb-2 justify-content-lg-center">
+          <b-col lg="5" md="6" class="d-flex justify-content-start">
             <img src="./../img/logo.svg" height="100" />
           </b-col>
-          <b-col class="d-flex justify-content-start pt-5">
+          <b-col lg="5" md="6" class="d-flex justify-content-start pt-5">
             <div class="d-flex pt-2">
               <img src="./../img/star.svg" height="15" />
               <img src="./../img/star.svg" height="15" />
@@ -32,7 +32,7 @@
       <div class="backgroundImage"></div>
       <b-container>
         <b-row align-h="center" class="py-5">
-          <b-col lg="5" md="6" class="d-flex justify-content-end">
+          <b-col lg="5" md="6" class="d-flex justify-content-center">
             <div class="shadow-sm mb-2 headerCard bg-white">
               <h2 class="px-5 py-4">Bent u onze nieuwe partner?</h2>
               <p class="px-5">
@@ -61,9 +61,9 @@
     <div class="bg-light">
       <b-container class="pt-5">
         <b-row class="justify-content-center">
-          <b-col lg="8" sm="12">
+          <b-col lg="8" sm="12" >
             <b-row class="pt-3 justify-content-center">
-              <b-col lg="4" sm="12" class="mb-5" v-for="(row,index) in rows" :key="index">
+              <b-col lg="4" sm="12" md="6" class="mb-5" v-for="(row,index) in rows" :key="index">
                 <div class="d-flex justify-content-center">
                   <div align="center" class="shadow-sm p-2 bg-white serviceCard">
                     <div class="py-3">
