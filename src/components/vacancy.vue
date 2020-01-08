@@ -7,7 +7,7 @@
           <b-col lg="5" md="6" class="d-flex justify-content-start">
             <img src="./../img/logo.svg" height="100" />
           </b-col>
-          <b-col lg="5" md="6" class="d-flex justify-content-start pt-5">
+          <b-col lg="5" md="6" class="d-flex justify-content-center pt-4 mt-3 ">
             <div class="d-flex pt-2">
               <img src="./../img/star.svg" height="15" />
               <img src="./../img/star.svg" height="15" />
@@ -15,14 +15,14 @@
               <img src="./../img/star.svg" height="15" />
               <img src="./../img/star_half.svg" height="15" />
             </div>
-            <div class="px-2 mb-0">
-              <p class="points">
+            <div class="px-2">
+              <p class="points mb-0">
                 8.4
                 <sup>/ 10</sup>
               </p>
             </div>
             <div>
-              <img src="./../img/feedbackcompany.svg" height="30" />
+              <img src="./../img/feedbackcompany.svg" height="25" />
             </div>
           </b-col>
         </b-row>
