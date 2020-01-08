@@ -72,6 +72,7 @@
                     <div class="title">
                       <h5 class="px-3">{{row.title}}</h5>
                     </div>
+                    <p class="py-2 px-3 text-left">{{row.text}}</p>
                   </div>
                 </div>
               </b-col>
